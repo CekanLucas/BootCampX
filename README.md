@@ -63,6 +63,18 @@ in the `migrations` folder is where you can initiate the tables, structure and d
 From your `psql` session, type `\i migrations/students_cohorts.sql`
 Now enter`\dt` into your `psql` session to make sure the two tables have been created
 
+###### Logging in to DB
+
+We can log in to `psql` normally however we can log in with everything already set up
+
+        psql -h localhost -p 5432 -U user bootcampx
+
+we can reset the password
+
+`psql` then run
+```psql
+ALTER USER user WITH PASSWORD 'new_password';
+```
 ###### Assignments
 
 Next entities are `assignment` and `assignment_submission`
